@@ -235,7 +235,7 @@ class CaptioningRNN(object):
             prev_c = next_c
         prev_h = next_h  # (N, H)
         out, _ = affine_forward(prev_h, W_vocab, b_vocab)  # (N,V)
-        word_vector_input = captions[:,i] = np.argmax(out, axis=1)  # (N,)
+        word_index_input = captions[:,i] = np.argmax(out, axis=1)  # (N,)
     ############################################################################
     #                             END OF YOUR CODE                             #
     ############################################################################
